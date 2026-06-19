@@ -1,4 +1,4 @@
-import SideNav from "../components/SideNav";
+import SideNav from "../Components/SideNav";
 import { Outlet } from "react-router-dom";
 import "../Css/DashboardLayout.css";
 
