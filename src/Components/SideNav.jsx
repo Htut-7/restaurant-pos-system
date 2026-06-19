@@ -66,7 +66,7 @@ export default function SideNav() {
 
         <nav>
           <NavLink
-            to="/"
+            to="/dashboard"
             onClick={() => setShowMenu(false)}
           >
             <MdDashboard />
