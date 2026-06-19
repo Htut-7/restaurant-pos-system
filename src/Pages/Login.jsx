@@ -16,7 +16,7 @@ export default function Login() {
         e.preventDefault();
         let user=await signIn(email,password);
         if (user){
-            navigate('/');
+            navigate('/dashboard');
         }
     }
 
