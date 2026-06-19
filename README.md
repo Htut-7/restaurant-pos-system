@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Restaurant POS System
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react\&logoColor=white)
@@ -56,3 +57,7 @@ This project is available for educational and portfolio purposes.
 ## Author
 
 Sithu Htut
+=======
+# restaurant-pos-system
+A full-featured Restaurant POS and Management System built with React, Firebase Authentication, and Firestore. Includes menu management, category management, order processing, cart functionality, sales analytics, revenue dashboard, and responsive admin interface.
+>>>>>>> 6d7a943117cb10eae6e403e87f769f77f40ac5ac
