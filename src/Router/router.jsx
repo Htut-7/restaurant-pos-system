@@ -2,6 +2,7 @@ import App from "../App";
 import {
   createBrowserRouter,
 } from "react-router-dom";
+
 import Dashboard from "../Pages/Dashboard";
 import Register from "../Pages/Register";
 import Login from "../Pages/Login";
@@ -13,53 +14,64 @@ import EditCategory from "../Pages/EditCategory";
 import POS from "../Pages/POS";
 import Orders from "../Pages/Orders";
 
+import ProtectedRoute from "../Components/ProtectedRoute";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    children:[
+    element: <App />,
+    children: [
       {
-        path: '/register',
-        element: <Register/>
+        index: true,
+        element: <Login />,
       },
       {
-        path: '/login',
-        element: <Login/>
+        path: "login",
+        element: <Login />,
       },
       {
-        element: <DashboardLayout/>,
-        children:[
+        path: "register",
+        element: <Register />,
+      },
+
+      {
+        element: (
+          <ProtectedRoute>
+            <DashboardLayout />
+          </ProtectedRoute>
+        ),
+        children: [
           {
-            index: true,
-            element: <Dashboard/>
+            path: "dashboard",
+            element: <Dashboard />,
           },
           {
-            path: 'category',
-            element: <Categories/>
+            path: "category",
+            element: <Categories />,
           },
           {
-            path: 'menu',
-            element: <Menu/>
+            path: "menu",
+            element: <Menu />,
           },
           {
-            path: 'editmenu/:id',
-            element: <EditMenu/>
+            path: "editmenu/:id",
+            element: <EditMenu />,
           },
           {
-            path: 'editcategory/:id',
-            element: <EditCategory/>
+            path: "editcategory/:id",
+            element: <EditCategory />,
           },
           {
-            path: 'pos',
-            element: <POS/>
+            path: "pos",
+            element: <POS />,
           },
           {
-            path: 'orders',
-            element: <Orders/>
-          }
-        ]
-      }
-    ]
+            path: "orders",
+            element: <Orders />,
+          },
+        ],
+      },
+    ],
   },
 ]);
 
